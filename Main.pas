@@ -13,12 +13,13 @@ type
     PnlMain: TPanel;
     PnlMenu: TPanel;
     PnlWorkingArea: TPanel;
-    Label1: TLabel;
+    LblTitle: TLabel;
     ActButtons: TActionList;
     ActClientForm: TAction;
     BtnClientForm: TButton;
     procedure ActClientFormExecute(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure FormResize(Sender: TObject);
   private
     { Private declarations }
     FrmActiveForm: TForm;
@@ -45,6 +46,11 @@ end;
 procedure TFrmMain.FormDestroy(Sender: TObject);
 begin
   FreeAndNil(Self.FrmActiveForm);
+end;
+
+procedure TFrmMain.FormResize(Sender: TObject);
+begin
+  LblTitle.Left := Trunc(PnlHeader.Width / 2) - Trunc(LblTitle.Width / 2);
 end;
 
 procedure TFrmMain.LoadForm(AClass: TFormClass);

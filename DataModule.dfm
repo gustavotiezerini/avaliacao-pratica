@@ -20,13 +20,13 @@ object DtmClientForm: TDtmClientForm
     end
     object CdsClientCPF: TStringField
       FieldName = 'CPF'
-      EditMask = '000\.000\.000\-00;0;_'
+      EditMask = '999.999.999-99;0;_'
       Size = 11
     end
     object CdsClientTELEFONE: TStringField
       DisplayLabel = 'Telefone'
       FieldName = 'TELEFONE'
-      EditMask = '!\(99\)00000-0000;0;_'
+      EditMask = '(99)99999-9999;0;_'
       Size = 11
     end
     object CdsClientEMAIL: TStringField
@@ -36,7 +36,7 @@ object DtmClientForm: TDtmClientForm
     end
     object CdsClientCEP: TStringField
       FieldName = 'CEP'
-      EditMask = '00000\-999;0;_'
+      EditMask = '99999-999;0;_'
       Size = 8
     end
     object CdsClientLOGRADOURO: TStringField

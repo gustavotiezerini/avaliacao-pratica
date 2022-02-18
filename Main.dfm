@@ -13,6 +13,7 @@ object FrmMain: TFrmMain
   OldCreateOrder = False
   WindowState = wsMaximized
   OnDestroy = FormDestroy
+  OnResize = FormResize
   PixelsPerInch = 96
   TextHeight = 13
   object PnlHeader: TPanel
@@ -27,9 +28,8 @@ object FrmMain: TFrmMain
     ParentBackground = False
     ShowCaption = False
     TabOrder = 0
-    ExplicitWidth = 981
-    object Label1: TLabel
-      Left = 10
+    object LblTitle: TLabel
+      Left = 340
       Top = 25
       Width = 205
       Height = 29
@@ -52,10 +52,6 @@ object FrmMain: TFrmMain
     Caption = 'PnlMain'
     ShowCaption = False
     TabOrder = 1
-    ExplicitLeft = 480
-    ExplicitTop = 264
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object PnlMenu: TPanel
       Left = 0
       Top = 0
@@ -97,10 +93,6 @@ object FrmMain: TFrmMain
       ParentBackground = False
       ShowCaption = False
       TabOrder = 1
-      ExplicitLeft = 480
-      ExplicitTop = 72
-      ExplicitWidth = 185
-      ExplicitHeight = 41
     end
   end
   object ActButtons: TActionList

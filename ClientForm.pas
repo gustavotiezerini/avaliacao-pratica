@@ -160,7 +160,8 @@ end;
 
 procedure TFrmClientForm.EdtCepExit(Sender: TObject);
 begin
-  GetAdress;
+  if not(DtmClientForm.CdsClientCEP.IsNull) then
+    GetAdress;
 end;
 
 procedure TFrmClientForm.FormAdjustment;
@@ -217,7 +218,10 @@ begin
     iIDSSLHandler.SSLOptions.Mode := sslmUnassigned;
 
     if Length(DtmClientForm.CdsClientCEP.AsString) <> 8 then
+    begin
+      EdtCep.SetFocus;
       raise Exception.Create('CEP inválido');
+    end;
 
     iHTTP.Get('https://viacep.com.br/ws/' + DtmClientForm.CdsClientCEP.AsString + '/json', sResponse);
 
@@ -226,7 +230,10 @@ begin
       oJsonObject := TJSONObject.ParseJSONValue(TEncoding.ASCII.GetBytes(UTF8ToString(sResponse.DataString)), 0) as TJSONObject;
 
       if oJsonObject = nil then
+      begin
+        EdtCep.SetFocus;
         raise Exception.Create('CEP inválido ou não encontrado');
+      end;
 
       DtmClientForm.CdsClientLOGRADOURO.AsString  := oJsonObject.Get('logradouro').JsonValue.Value;
       DtmClientForm.CdsClientCOMPLEMENTO.AsString := oJsonObject.Get('complemento').JsonValue.Value;
@@ -235,7 +242,10 @@ begin
       DtmClientForm.CdsClientESTADO.AsString      := oJsonObject.Get('uf').JsonValue.Value;
     end
     else
+    begin
+      EdtCep.SetFocus;
       raise Exception.Create('CEP inexistente!');
+    end;
   finally
     FreeAndNil(iHTTP);
     FreeAndNil(iIDSSLHandler);
@@ -426,7 +436,7 @@ begin
     Exit;
   end;
 
-  Result := rRegex.IsMatch(DtmClientForm.CdsClientEMAIL.AsString, '^[^@]+@[^.]');
+  Result := rRegex.IsMatch(DtmClientForm.CdsClientEMAIL.AsString, '^[^@]+@[^.]+\.[^.]');
 
   if not(Result) then
   begin
