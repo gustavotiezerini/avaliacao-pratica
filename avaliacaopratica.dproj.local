@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/02/18 04:50:26.000.039,=C:\Users\gustavotiezerini\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/02/18 04:54:13.000.369,C:\Users\gustavotiezerini\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Projects\InfoSistemas\avaliacao-pratica\Main.dfm</Transaction>
+    <Transaction>2022/02/18 04:54:13.000.369,C:\Users\gustavotiezerini\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Projects\InfoSistemas\avaliacao-pratica\Main.pas</Transaction>
+    <Transaction>2022/02/18 04:54:49.000.306,C:\Users\gustavotiezerini\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Projects\InfoSistemas\avaliacao-pratica\avaliacaopratica.dproj</Transaction>
+    <Transaction>2022/02/18 05:22:39.000.135,=C:\Projects\InfoSistemas\avaliacao-pratica\Unit1.pas</Transaction>
+    <Transaction>2022/02/18 05:23:15.000.463,C:\Projects\InfoSistemas\avaliacao-pratica\Unit1.pas=C:\Projects\InfoSistemas\avaliacao-pratica\ClientForm.pas</Transaction>
+    <Transaction>2022/02/18 05:23:15.000.463,C:\Projects\InfoSistemas\avaliacao-pratica\Unit1.dfm=C:\Projects\InfoSistemas\avaliacao-pratica\ClientForm.dfm</Transaction>
+    <Transaction>2022/02/18 05:31:20.000.197,=C:\Projects\InfoSistemas\avaliacao-pratica\Unit1.pas</Transaction>
+    <Transaction>2022/02/18 05:32:06.000.556,C:\Projects\InfoSistemas\avaliacao-pratica\Unit1.dfm=C:\Projects\InfoSistemas\avaliacao-pratica\DataModule.dfm</Transaction>
+    <Transaction>2022/02/18 05:32:06.000.556,C:\Projects\InfoSistemas\avaliacao-pratica\Unit1.pas=C:\Projects\InfoSistemas\avaliacao-pratica\DataModule.pas</Transaction>
+  </Transactions>
+</BorlandProject>

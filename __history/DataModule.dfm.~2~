@@ -1,0 +1,16 @@
+object DtmClientForm: TDtmClientForm
+  OldCreateOrder = False
+  Height = 177
+  Width = 382
+  object CdsClient: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 48
+    Top = 16
+  end
+  object DsClient: TDataSource
+    DataSet = CdsClient
+    Left = 144
+    Top = 16
+  end
+end
